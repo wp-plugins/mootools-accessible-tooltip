@@ -7,31 +7,31 @@ Author: Theofanis Oikonomou
 Version: 1
 Author URI: http://www.iti.gr/iti/people/ThOikon.html
 */
-include_once 'getRecentPosts.php';
-include_once 'getRecentComments.php';
-include_once 'getArchives.php';
+// include_once 'getRecentPosts.php';
+// include_once 'getRecentComments.php';
+// include_once 'getArchives.php';
 
 add_action("plugins_loaded", "MooToolsAccessibleTooltip_init");
 function MooToolsAccessibleTooltip_init() {
     register_sidebar_widget(__('MooTools Accessible Tooltip'), 'widget_MooToolsAccessibleTooltip');
     register_widget_control(   'MooTools Accessible Tooltip', 'MooToolsAccessibleTooltip_control', 200, 200 );
     if ( !is_admin() && is_active_widget('widget_MooToolsAccessibleTooltip') ) {
-        wp_register_style('jquery.ui.all', ( get_bloginfo('wpurl') . '/wp-content/plugins/MooToolsAccessibleTooltip/lib/jquery-ui/themes/base/jquery.ui.all.css'));
+        wp_register_style('jquery.ui.all', ( get_bloginfo('wpurl') . '/wp-content/plugins/mootools-accessible-tooltip/lib/jquery-ui/themes/base/jquery.ui.all.css'));
         wp_enqueue_style('jquery.ui.all');
 
         wp_deregister_script('jquery');
 
         // add your own script
-        wp_register_script('mootools-core', ( get_bloginfo('wpurl') . '/wp-content/plugins/MooToolsAccessibleTooltip/lib/mootools-core.js'));
+        wp_register_script('mootools-core', ( get_bloginfo('wpurl') . '/wp-content/plugins/mootools-accessible-tooltip/lib/mootools-core.js'));
         wp_enqueue_script('mootools-core');
 
-        wp_register_script('mootools-more', ( get_bloginfo('wpurl') . '/wp-content/plugins/MooToolsAccessibleTooltip/lib/mootools-more.js'));
+        wp_register_script('mootools-more', ( get_bloginfo('wpurl') . '/wp-content/plugins/mootools-accessible-tooltip/lib/mootools-more.js'));
         wp_enqueue_script('mootools-more');
 
-        wp_register_script('mootools-more-dialog', ( get_bloginfo('wpurl') . '/wp-content/plugins/MooToolsAccessibleTooltip/lib/mootools_more_dialog.js'));
-        wp_enqueue_script('mootools-more-dialog');σ
+        wp_register_script('mootools-more-dialog', ( get_bloginfo('wpurl') . '/wp-content/plugins/mootools-accessible-tooltip/lib/mootools_more_dialog.js'));
+        wp_enqueue_script('mootools-more-dialog');
 
-        wp_register_style('MooToolsAccessibleTooltip_css', ( get_bloginfo('wpurl') . '/wp-content/plugins/MooToolsAccessibleTooltip/lib/MooToolsAccessibleTooltip.css'));
+        wp_register_style('MooToolsAccessibleTooltip_css', ( get_bloginfo('wpurl') . '/wp-content/plugins/mootools-accessible-tooltip/lib/MooToolsAccessibleTooltip.css'));
         wp_enqueue_style('MooToolsAccessibleTooltip_css');
     }
 }
@@ -59,9 +59,9 @@ function widget_MooToolsAccessibleTooltip($args) {
 }
 
 function MooToolsAccessibleTooltipContent() {
-    $recentPosts = get_recent_posts();
-    $recentComments = get_recent_comments();
-    $archives = get_my_archives();
+    // $recentPosts = get_recent_posts();
+    // $recentComments = get_recent_comments();
+    // $archives = get_my_archives();
 
     $options = get_option("widget_MooToolsAccessibleTooltip");
     if (!is_array( $options )) {
@@ -73,7 +73,7 @@ function MooToolsAccessibleTooltipContent() {
     }
 
     echo '
-	<form action="http://aegis.iti.gr/pilots/MooTools/after/" id="searchform" method="get" role="search">
+	<form action="" id="searchform" method="get" role="search">
 		<div class="widget_search" id="searchformMooToolsAccessibleTooltip">
 			<label for="s" class="screen-reader-text">Search for:</label>
 			<input type="text" id="s" name="s" value="">
