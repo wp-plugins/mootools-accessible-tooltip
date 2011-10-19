@@ -4,7 +4,7 @@ Plugin Name: MooTools Accessible Tooltip
 Plugin URI: http://wordpress.org/extend/plugins/mootools-accessible-tooltip/
 Description: WAI-ARIA Enabled Tooltip Plugin for Wordpress
 Author: Theofanis Oikonomou
-Version: 1
+Version: 2
 Author URI: http://www.iti.gr/iti/people/ThOikon.html
 */
 // include_once 'getRecentPosts.php';
