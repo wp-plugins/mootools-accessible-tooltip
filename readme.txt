@@ -1,9 +1,9 @@
 === MooTools Accessible Tooltip ===
-Contributors: Theofanis Oikonomou
+Contributors: Theofanis Oikonomou, Kontotasiou Dionysia
 Tags: accessible, WAI, ARIA, mootools, widgets
 Requires at least: 3.0.1
 Tested up to: 3.2.1
-Stable tag: 1.1
+Stable tag: 2.0
 
 MooTools Accessible Tooltip is a WAI-ARIA Enabled Tooltip Plugin for Wordpress
 
@@ -40,3 +40,5 @@ This work was supported by the [Informatics and Telematics Institute](http://www
 
 = 1.0 =
 * initial release
+= 2.0 =
+* Version 2
