@@ -1,5 +1,5 @@
 === MooTools Accessible Tooltip ===
-Contributors: Theofanis Oikonomou, Kontotasiou Dionysia
+Contributors: Kontotasiou Dionysia
 Tags: accessible, WAI, ARIA, mootools, widgets
 Requires at least: 3.0.1
 Tested up to: 3.3.2
